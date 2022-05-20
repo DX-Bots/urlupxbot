@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 import os
 
 from plugins.config import Config
+from pyrogram import filters
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
