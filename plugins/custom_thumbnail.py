@@ -69,7 +69,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
 @Client.on_message(filters.private & filters.command("showthumb") )
 async def viewthumbnail(bot, update):
     if not update.from_user:
-        return await update.reply_text("I don't know about you sar :(")
+        return await update.reply_text("I don't know about you Pro:(")
     await add_user_to_database(bot, update) 
     if Config.UPDATES_CHANNEL:
       fsub = await handle_force_subscribe(bot, update)
@@ -80,13 +80,13 @@ async def viewthumbnail(bot, update):
         await bot.send_photo(
         chat_id=update.chat.id,
         photo=thumbnail,
-        caption=f"ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ sᴀᴠᴇᴅ ᴛʜᴜᴍʙɴᴀɪʟ 🦠",
+        caption=f"Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Sᴀᴠᴇᴅ Tʜᴜᴍʙɴᴀɪʟ 🖼",
         reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("🗑️ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="deleteThumbnail")]]
+                    [[InlineKeyboardButton("🗑️ Dᴇʟᴇᴛᴇ Tʜᴜᴍʙɴᴀɪʟ", callback_data="deleteThumbnail")]]
                 ),
         reply_to_message_id=update.message_id)
     else:
-        await update.reply_text(text=f"ɴᴏ ᴛʜᴜᴍʙɴᴀɪʟ ғᴏᴜɴᴅ 🤒")
+        await update.reply_text(text=f"Nᴏ Tʜᴜᴍʙɴᴀɪʟ Fᴏᴜɴᴅ ❎")
 
 
 async def Gthumb01(bot, update):
